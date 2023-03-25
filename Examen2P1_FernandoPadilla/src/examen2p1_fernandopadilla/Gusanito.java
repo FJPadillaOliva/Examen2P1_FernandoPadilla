@@ -56,22 +56,22 @@ public class Gusanito {
             String temp = instrucciones.get(i);
             move = Integer.parseInt(temp.substring(0, 1));
             System.out.println("Ejecutando instruccion: " + temp);
-                if(temp.contains("UP")&& gusX - move > matriz.length){
+                if(temp.contains("UP")&& gusX - move >= matriz.length){
                     matriz[gusX][gusY] = ' ';
                     gusX = gusX - move;
                     matriz[gusX][gusY] = '§';
                     imprimirM();
-                }else if(temp.contains("DN")&& gusX + move < matriz.length){
+                }else if(temp.contains("DN")&& gusX + move <= matriz.length){
                     matriz[gusX][gusY] = ' ';
                     gusX = gusX + move;
                     matriz[gusX][gusY] = '§';
                     imprimirM();
-                }else if(temp.contains("RT")&& gusY + move < matriz[i].length){
+                }else if(temp.contains("RT")&& gusY + move <= matriz[i].length){
                     matriz[gusX][gusY] = ' ';
                     gusY = gusY + move;
                     matriz[gusX][gusY] = '§';
                     imprimirM();
-                }else if(temp.contains("LT")&& gusY - move > matriz[i].length ){
+                }else if(temp.contains("LT")&& gusY - move >= matriz[i].length ){
                     matriz[gusX][gusY] = ' ';
                     gusY = gusY - move;
                     matriz[gusX][gusY] = '§';
